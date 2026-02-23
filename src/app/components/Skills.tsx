@@ -31,9 +31,9 @@ export function Skills() {
       category: 'Habilidades Blandas',
       skills: [
         { name: 'Comunicación', level: 95 },
-        { name: 'Negociación', level: 88 },
+        { name: 'Negociación', level: 80 },
         { name: 'Resolución de Conflictos', level: 90 },
-        { name: 'Liderazgo de Equipos', level: 85 }
+        { name: 'Liderazgo de Equipos', level: 90 }
       ]
     }
   ];

@@ -13,7 +13,7 @@ export function Contact() {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !message.trim()) return;
 
-    const subject = encodeURIComponent(`Contacto desde portfolio - ${name}`);
+    const subject = encodeURIComponent(`Contacto desde porfolio - ${name}`);
     const body = encodeURIComponent(
       `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
     );
@@ -151,7 +151,7 @@ export function Contact() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
-                    placeholder="Cuéntame sobre la oportunidad..."
+                    placeholder="Contame sobre la oportunidad..."
                   />
                 </div>
 
