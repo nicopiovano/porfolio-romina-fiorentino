@@ -15,30 +15,35 @@ export function Header() {
           <h1 className="font-semibold text-gray-900">Romina Fiorentino</h1>
           <nav className="hidden md:flex items-center gap-8">
             <button
+              style={{ cursor: 'pointer' }}
               onClick={() => scrollToSection('about')}
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               Sobre Mí
             </button>
             <button
+              style={{ cursor: 'pointer' }}
               onClick={() => scrollToSection('experience')}
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               Experiencia
             </button>
             <button
+              style={{ cursor: 'pointer' }}
               onClick={() => scrollToSection('education')}
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               Educación
             </button>
             <button
+              style={{ cursor: 'pointer' }}
               onClick={() => scrollToSection('skills')}
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               Habilidades
             </button>
             <button
+              style={{ cursor: 'pointer' }}
               onClick={() => scrollToSection('contact')}
               className="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
             >
