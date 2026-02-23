@@ -7,7 +7,7 @@ export function Footer() {
             © 2026 Romina Fiorentino. Todos los derechos reservados.
           </p>
           <p className="text-gray-400 text-sm">
-            Diseñado con pasión por recursos humanos
+            Diseñado por <a href="https://nico-piovano-porfolio.vercel.app/es" target="_blank" rel="noopener noreferrer">Nicolás Piovano</a>  - 2026
           </p>
         </div>
       </div>
