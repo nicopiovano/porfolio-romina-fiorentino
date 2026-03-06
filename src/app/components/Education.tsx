@@ -25,11 +25,11 @@ export function Education() {
   ];
 
   return (
-    <section id="education" className="bg-gray-50 py-16 md:py-24">
+    <section id="education" className="bg-muted/50 py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-12">
           <h2 className="mb-4">Educación y Certificaciones</h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-muted-foreground text-lg">
             Formación continua para estar al día en las mejores prácticas de RRHH
           </p>
         </div>
@@ -38,17 +38,17 @@ export function Education() {
           {education.map((edu, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
+              className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <GraduationCap className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
                   <h3 className="mb-2">{edu.degree}</h3>
-                  <p className="text-gray-600 mb-1">{edu.institution}</p>
-                  <p className="text-gray-500 text-sm mb-3">{edu.year}</p>
-                  <p className="text-gray-600 text-sm">{edu.description}</p>
+                  <p className="text-muted-foreground mb-1">{edu.institution}</p>
+                  <p className="text-muted-foreground text-sm mb-3">{edu.year}</p>
+                  <p className="text-muted-foreground text-sm">{edu.description}</p>
                 </div>
               </div>
             </div>
