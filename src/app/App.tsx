@@ -12,7 +12,7 @@ export default function App() {
   const profileImage = profileImageSrc;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Header />
       <main>
         <Hero profileImage={profileImage} />

@@ -46,11 +46,11 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="bg-gray-50 py-16 md:py-24">
+    <section id="about" className="bg-muted/50 py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-12">
           <h2 className="mb-4">Sobre Mí</h2>
-          <p className="text-gray-600 text-lg max-w-3xl">
+          <p className="text-muted-foreground text-lg max-w-3xl">
             Profesional de Recursos Humanos con sólidas habilidades interpersonales, alta capacidad de escucha, comunicación efectiva y gestión de relaciones. Fui reconocida por generar confianza, facilitar el diálogo y acompañar a las personas en contextos de cambio, adaptación y desarrollo profesional.
           </p>
         </div>
@@ -61,13 +61,13 @@ export function About() {
             return (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow"
+                className="bg-card border border-border p-6 rounded-xl hover:shadow-lg transition-shadow"
               >
-                <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                  <Icon className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <h3 className="mb-2">{value.title}</h3>
-                <p className="text-gray-600 text-sm">{value.description}</p>
+                <p className="text-muted-foreground text-sm">{value.description}</p>
               </div>
             );
           })}

@@ -22,11 +22,11 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-gray-50 py-16 md:py-24">
+    <section id="contact" className="bg-muted/50 py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-12 text-center">
           <h2 className="mb-4">Contacto</h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-muted-foreground text-lg">
             ¿Tienes una oportunidad interesante? Me encantaría conocerla
           </p>
         </div>
@@ -37,40 +37,40 @@ export function Contact() {
             <h3 className="mb-6">Información de Contacto</h3>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Mail className="w-5 h-5 text-white" />
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                <Mail className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
-                <p className="text-gray-600 text-sm mb-1">Email</p>
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-gray-900 hover:underline">
+                <p className="text-muted-foreground text-sm mb-1">Email</p>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-foreground hover:underline">
                   {CONTACT_EMAIL}
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Phone className="w-5 h-5 text-white" />
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                <Phone className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
-                <p className="text-gray-600 text-sm mb-1">Teléfono</p>
-                <a href="tel:+5491161713511" className="text-gray-900 hover:underline">
+                <p className="text-muted-foreground text-sm mb-1">Teléfono</p>
+                <a href="tel:+5491161713511" className="text-foreground hover:underline">
                   +54 9 11 6171 3511
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Linkedin className="w-5 h-5 text-white" />
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                <Linkedin className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
-                <p className="text-gray-600 text-sm mb-1">LinkedIn</p>
+                <p className="text-muted-foreground text-sm mb-1">LinkedIn</p>
                 <a
                   href="https://www.linkedin.com/in/romina-fiorentino/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-900 hover:underline"
+                  className="text-foreground hover:underline"
                 >
                   linkedin.com/in/romina-fiorentino/
                 </a>
@@ -78,29 +78,30 @@ export function Contact() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-5 h-5 text-white" />
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
-                <p className="text-gray-600 text-sm mb-1">Ubicación</p>
-                <p className="text-gray-900">Buenos Aires, Argentina</p>
-                <p className="text-gray-600 text-sm">Disponible para trabajo remoto</p>
+                <p className="text-muted-foreground text-sm mb-1">Ubicación</p>
+                <p className="text-foreground">Buenos Aires, Argentina</p>
+                <p className="text-muted-foreground text-sm">Disponible para trabajo remoto</p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white border border-gray-200 rounded-xl p-8">
+          <div className="bg-card border border-border rounded-xl p-8">
             <h3 className="mb-6">Envíame un Mensaje</h3>
 
             {sent ? (
               <div className="flex flex-col items-center justify-center gap-4 py-10 text-center">
                 <CheckCircle className="w-12 h-12 text-green-500" />
-                <p className="text-gray-900 font-medium text-lg">¡Listo! Se abrió tu cliente de correo.</p>
-                <p className="text-gray-500 text-sm">Revisá que el correo se haya enviado correctamente.</p>
+                <p className="text-foreground font-medium text-lg">¡Listo! Se abrió tu cliente de correo.</p>
+                <p className="text-muted-foreground text-sm">Revisá que el correo se haya enviado correctamente.</p>
                 <button
+                  type="button"
                   onClick={() => { setSent(false); setName(''); setEmail(''); setMessage(''); }}
-                  className="mt-2 text-sm text-gray-500 underline cursor-pointer hover:text-gray-900"
+                  className="mt-2 text-sm text-muted-foreground underline cursor-pointer hover:text-foreground transition-colors"
                 >
                   Enviar otro mensaje
                 </button>
@@ -108,7 +109,7 @@ export function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm text-foreground mb-2">
                     Nombre completo
                   </label>
                   <input
@@ -118,13 +119,13 @@ export function Contact() {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                    className="w-full px-4 py-2 border border-border rounded-lg bg-input-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                     placeholder="Tu nombre"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm text-foreground mb-2">
                     Email
                   </label>
                   <input
@@ -134,13 +135,13 @@ export function Contact() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                    className="w-full px-4 py-2 border border-border rounded-lg bg-input-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                     placeholder="tu@email.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm text-foreground mb-2">
                     Mensaje
                   </label>
                   <textarea
@@ -150,14 +151,14 @@ export function Contact() {
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+                    className="w-full px-4 py-2 border border-border rounded-lg bg-input-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                     placeholder="Contame sobre la oportunidad..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Send className="w-4 h-4" />
                   Enviar Mensaje
